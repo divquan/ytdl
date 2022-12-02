@@ -1,0 +1,39 @@
+.searchbar-container form {
+    margin: 0 1vw;
+    display: flex;
+}
+
+.searchbar-container form input {
+    outline: none;
+    width: 70vw;
+    max-width: 600px;
+    height: 36px;
+    background-color: black;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    padding: 12px 1rem;
+}
+
+.searchbar-container form input:focus {
+    outline: solid 1px rgba(221, 174, 248, 0.54);
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(251, 251, 251, 0.19);
+}
+
+.searchbar-container form button {
+    width: calc(65px + 4vw);
+    border: none;
+    padding: 4px;
+    outline: none;
+    font-size: 100%;
+}
+
+.searchbar-container form button span {
+    font-size: 1.4rem;
+    font-weight: bolder;
+}
+
+.searchbar-container form button:hover {
+    background-color: rgb(46, 24, 67);
+    color: #fff;
+}
