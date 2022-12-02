@@ -1,4 +1,4 @@
-import { VscUnmute, VscMute } from "react-icons/vsc";
+import { VscUnmute } from "react-icons/vsc";
 import "./DownloadCard.css";
 import { MdFileDownload } from "react-icons/md";
 
