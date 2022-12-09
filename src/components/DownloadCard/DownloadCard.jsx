@@ -1,8 +1,18 @@
-import { VscUnmute, VscMute } from "react-icons/vsc";
+import { VscUnmute } from "react-icons/vsc";
 import "./DownloadCard.css";
 import { MdFileDownload } from "react-icons/md";
+import { useState } from "react";
 
 const DownloadCard = ({ hasAudio, url, size, quality, ext, name }) => {
+  // const [tempUrl, setTempUrl] = useState("");
+  // const fetchFile = (url) => {
+  //   fetch(url)
+  //     .then((res) => res.blob())
+  //     .then((file) => {
+  //       setTempUrl(URL.createObjectURL(file));
+  //       // let aTag = URL.createObjectURL(file);
+  //     });
+  // };
   return (
     <div className="download-container">
       <div className="download-container-row1">
