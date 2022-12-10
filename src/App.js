@@ -7,7 +7,7 @@ function App() {
   const [UserInput, setUserInput] = useState("");
   const [VideoData, setVideoData] = useState([]);
   const [alert, setAlert] = useState({ show: false, msg: "" });
-
+  const [loading, setLoading] = useState(false);
   const youtubeParser = (url) => {
     var regExp =
       /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
@@ -38,13 +38,18 @@ function App() {
           videoItems: response.videos.items,
           thumbnail: response.thumbnails[0].url,
         });
+        setLoading(false);
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        console.error(err);
+        setLoading(true);
+      });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("fetching");
+    setLoading(true);
     fetchdata(videoId);
   };
   useEffect(() => fetchdata(videoId), []);
@@ -52,12 +57,13 @@ function App() {
   console.log(VideoData);
   return (
     <div className="main-app">
+      <h1>Youtube Video Downloader</h1>
       <SearchBar
         UserInput={UserInput}
         setUserInput={setUserInput}
         handleSubmit={handleSubmit}
       />
-      <ResultBody VideoData={VideoData} />
+      <ResultBody VideoData={VideoData} loading={loading} />
     </div>
   );
 }

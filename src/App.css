@@ -11,3 +11,9 @@
 .section-margins {
   margin: 7rem calc(24px + 12.5vw)
 }
+
+.main-app h1 {
+  font-size: 2rem;
+  text-shadow: 5px 5px black;
+
+}

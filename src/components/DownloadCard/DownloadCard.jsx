@@ -4,15 +4,6 @@ import { MdFileDownload } from "react-icons/md";
 import { useState } from "react";
 
 const DownloadCard = ({ hasAudio, url, size, quality, ext, name }) => {
-  // const [tempUrl, setTempUrl] = useState("");
-  // const fetchFile = (url) => {
-  //   fetch(url)
-  //     .then((res) => res.blob())
-  //     .then((file) => {
-  //       setTempUrl(URL.createObjectURL(file));
-  //       // let aTag = URL.createObjectURL(file);
-  //     });
-  // };
   return (
     <div className="download-container">
       <div className="download-container-row1">
@@ -37,7 +28,8 @@ const DownloadCard = ({ hasAudio, url, size, quality, ext, name }) => {
         </div>
       </div>
       <a
-        href={url}
+        href={`file:${url}`}
+        // href={tempUrl}
         download={name}
         target="_blank"
         rel="noreferrer"

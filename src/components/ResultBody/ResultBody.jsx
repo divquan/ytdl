@@ -4,10 +4,10 @@ import "./ResultBody.css";
 import {} from "react-icons/md";
 import DownloadCard from "../DownloadCard/DownloadCard";
 
-const ResultBody = ({ VideoData, alert }) => {
+const ResultBody = ({ VideoData, loading }) => {
   return (
     <div className="resultbody ">
-      {VideoData.status && (
+      {VideoData.status ? (
         <>
           <div className="row1">
             <h2>
@@ -30,6 +30,35 @@ const ResultBody = ({ VideoData, alert }) => {
             ))}
           </div>
         </>
+      ) : (
+        <div className="Alert">
+          <h2>
+            Copy and paste the link to the Youtube video into the input field
+            above
+          </h2>
+        </div>
+      )}
+      {loading && (
+        <div className="loadingio-spinner-spinner-bglmvp8a12i spinner">
+          <div className="ldio-ucij0jb0008">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
       )}
     </div>
   );
