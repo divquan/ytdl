@@ -6,7 +6,7 @@ import ResultBody from "./components/ResultBody/ResultBody";
 function App() {
   const [UserInput, setUserInput] = useState("");
   const [VideoData, setVideoData] = useState([]);
-  const [alert, setAlert] = useState({ show: false, msg: "" });
+  // const [alert, setAlert] = useState({ show: false, msg: "" });
   const [loading, setLoading] = useState(false);
   const youtubeParser = (url) => {
     var regExp =
@@ -52,6 +52,7 @@ function App() {
     setLoading(true);
     fetchdata(videoId);
   };
+  // eslint-disable-next-line
   useEffect(() => fetchdata(videoId), []);
 
   console.log(VideoData);
