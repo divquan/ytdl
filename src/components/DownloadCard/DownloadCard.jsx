@@ -1,7 +1,7 @@
 import { VscUnmute } from "react-icons/vsc";
 import "./DownloadCard.css";
 import { MdFileDownload } from "react-icons/md";
-import { useState } from "react";
+// import { useState } from "react";
 
 const DownloadCard = ({ hasAudio, url, size, quality, ext, name }) => {
   return (
