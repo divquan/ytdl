@@ -28,12 +28,12 @@ const DownloadCard = ({ hasAudio, url, size, quality, ext, name }) => {
         </div>
       </div>
       <a
-        href={`file:${url}`}
+        href={url}
         // href={tempUrl}
+        className="download-container-row2"
         download={name}
         target="_blank"
         rel="noreferrer"
-        className="download-container-row2"
         crossOrigin="anonymous"
       >
         <button>

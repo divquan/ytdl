@@ -1,0 +1,15 @@
+.alert-container {
+    border: solid black 1px;
+    padding: 0.4rem;
+    background-color: rgb(252, 166, 166);
+    color: rgb(245, 0, 0);
+    margin-bottom: 1rem;
+    border-radius: 17px;
+    max-width: 75vw;
+    word-wrap: break-word;
+}
+
+.alert-container h3 {
+    font-size: larger;
+    margin: 0;
+}

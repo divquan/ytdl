@@ -9,7 +9,7 @@
 }
 
 .section-margins {
-  margin: 7rem calc(24px + 12.5vw)
+  margin: 5rem calc(24px + 12.5vw) 3rem calc(24px + 12.5vw);
 }
 
 .main-app h1 {
